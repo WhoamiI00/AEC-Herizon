@@ -3,13 +3,13 @@ import { Globe } from '@/components/magicui/globe';
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 px-4 relative overflow-x-clip">
-      <h1 className="text-[60px] leading-none mb-6 font-instrument-sans tracking-normal relative z-10">
+    <section className="flex flex-col items-center justify-center text-center py-20 px-4 relative overflow-x-clip h-[1000px]">
+      <h1 className="text-[60px] leading-none mb-6 font-instrument-sans tracking-normal relative z-10 bottom-[360]">
         <span className="text-[#4B336D] font-normal inline-block transition-all duration-300 hover:scale-105 hover:text-[#6772e5] cursor-pointer">Three Infinite Loops,</span>
         <br />
         <span className="bg-gradient-to-r from-[#4B336D] to-[#E1627F] text-transparent bg-clip-text font-semibold inline-block transition-all duration-300 hover:scale-105 hover:from-[#6772e5] hover:to-[#E1627F] cursor-pointer">One Global Impact.</span>
       </h1>
-      <div className="absolute inset-0 opacity-20 z-0 scale-400 top-70 h-50 w-full overflow-clip">
+      <div className="absolute inset-0 opacity-20 z-0 scale-400 h-50 w-full overflow-clip my-70">
         
         <Globe 
           className="mx-auto" 
