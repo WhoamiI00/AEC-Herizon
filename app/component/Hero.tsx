@@ -12,8 +12,8 @@ const Hero = () => {
       </h1>
       {/* <InfinityLoops /> */}
       <div className='z-100'>
-        <div className='absolute top-1/2 left-50 -translate-x-1/2 -translate-y-1/2'><InfinityLoops /></div>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'><InfinityLoops /></div>
+        <div className='absolute top-[-100] left-153 scale-[2.0]'><InfinityLoops /></div>
+        <div className='absolute top-[-100] right-153  scale-[2.0]'><InfinityLoops /></div>
 
       </div>
       <div className="absolute inset-0 z-0 scale-400 h-50 w-full overflow-clip my-70" 
@@ -36,9 +36,9 @@ const Hero = () => {
             mapSamples: 200000,
             mapBrightness: 1.2,
             
-            baseColor: [0.5,1,1],
+            baseColor: [0.71, 0.78, 0.95],
             markerColor: [0.80, 0.85, 0.96],
-            glowColor: [0.5,1,1],
+            glowColor: [0.71, 0.78, 0.95],
             
             markers: [
               { location: [14.5995, 120.9842], size: 0.03 },

@@ -1,122 +1,127 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { FaPencilRuler, FaThLarge, FaBullhorn } from 'react-icons/fa';
 
-const Services = () => {
+const SectionCard = ({
+  title,
+  items,
+  icon,
+  gradient,
+  index,
+}: {
+  title: string;
+  items: string[];
+  icon: React.ReactNode;
+  gradient: string; // tailwind bg gradient classes
+  index: number; // for spacing on the timeline
+}) => {
   return (
-    <section className="py-16 px-4 relative" style={{ background: 'linear-gradient(to bottom, #D8DDED, #E1E8FF)' }}>
-      <div className="container mx-auto">
-        <h2 className="text-[45px] font-instrument-sans font-normal leading-[100%] tracking-[0%] mb-12 text-center">
-          Our <span className="font-bold text-[#6C4CF4]">Services</span>
-        </h2>
-        
-        <div className="max-w-5xl mx-auto relative">
-          {/* Vertical dashed line */}
-          <div className="absolute left-[80px] top-0 bottom-0 border-l-2 border-dashed border-gray-300 z-0"></div>
-          
-          {/* BIM Services */}
-          <div className="flex mb-12 relative z-10">
-            <div className="flex-shrink-0 w-[160px] flex justify-center">
-              <div className="w-[100px] h-[100px] rounded-full bg-[#E3E8FF] flex items-center justify-center shadow-md">
-                <FaPencilRuler className="text-[#6C4CF4] text-3xl" />
-              </div>
-            </div>
-            <div className="flex-grow bg-[#E3E8FF] rounded-2xl p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-[#4B336D]">BIM Services</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">BIM Modeling (LOD 100–500)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Revit Family & Template Creation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Clash Detection, Coordination</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Scan-to-BIM & As-Built</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Automation & MEPF modeling</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          {/* Business Development */}
-          <div className="flex mb-12 relative z-10">
-            <div className="flex-shrink-0 w-[160px] flex justify-center">
-              <div className="w-[100px] h-[100px] rounded-full bg-[#E8D9FF] flex items-center justify-center shadow-md">
-                <FaThLarge className="text-[#6C4CF4] text-3xl" />
-              </div>
-            </div>
-            <div className="flex-grow bg-[#E8D9FF] rounded-2xl p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-[#4B336D]">Business Development</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Go-to-Market for BIM startups</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Proposal & Estimation</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">CRM Setup & Lead Gen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Brand Strategy</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Strategic AEC Partnerships</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          {/* Digital Marketing & Branding */}
-          <div className="flex relative z-10">
-            <div className="flex-shrink-0 w-[160px] flex justify-center">
-              <div className="w-[100px] h-[100px] rounded-full bg-[#FFE5B8] flex items-center justify-center shadow-md">
-                <FaBullhorn className="text-[#6C4CF4] text-3xl" />
-              </div>
-            </div>
-            <div className="flex-grow bg-[#FFE5B8] rounded-2xl p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-[#4B336D]">Digital Marketing & Branding</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">SEO for BIM & AEC</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Social Media & Email Campaigns</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">BIM-based Content</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Marketing Decks</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#6C4CF4] mr-2">•</span>
-                  <span className="text-gray-700">Digital Positioning</span>
-                </li>
-              </ul>
-            </div>
+    <div className="relative flex gap-4 sm:gap-6">
+      {/* Timeline dot */}
+      <div className="relative shrink-0">
+        <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-white shadow-[0_6px_18px_rgba(0,0,0,0.12)] grid place-items-center ring-1 ring-white/60">
+          <div className="h-5 w-5 sm:h-7 sm:w-7 rounded-full bg-[#E9ECFF] grid place-items-center text-[#6F6BD9]">
+            {/* icon miniature inside the dot for subtle detail */}
+            <span className="text-[12px] sm:text-sm opacity-80">{icon}</span>
           </div>
         </div>
+
+        {/* timeline dashed line segment below, hidden after last card */}
+        <div
+          className={`absolute left-1/2 top-12 sm:top-16 -translate-x-1/2 w-px ${
+            index < 2 ? 'h-[120px] sm:h-[150px]' : 'h-0'
+          } border-l border-dashed border-[#C9D0EE]`}
+        />
+      </div>
+
+      {/* Card */}
+      <div
+        className={`flex-1 rounded-2xl sm:rounded-[20px] px-5 sm:px-7 py-5 sm:py-6 shadow-[0_10px_24px_rgba(22,27,72,0.10)] ${gradient}`}
+      >
+        <div className="flex items-start gap-4">
+          {/* Left circular badge */}
+          <div className="hidden sm:grid place-items-center rounded-full bg-white/80 backdrop-blur h-14 w-14 shadow-[0_6px_18px_rgba(0,0,0,0.10)] ring-1 ring-white/60">
+            <div className="h-11 w-11 rounded-full grid place-items-center text-[#6F6BD9] bg-white">
+              <span className="text-xl">{icon}</span>
+            </div>
+          </div>
+
+          {/* Text block */}
+          <div className="min-w-0">
+            <h3 className="text-[17px] sm:text-[18px] font-semibold text-[#4B3F8C] tracking-[-0.01em]">
+              {title}
+            </h3>
+            <ul className="mt-2.5 sm:mt-3 space-y-1.5 sm:space-y-2">
+              {items.map((t, i) => (
+                <li
+                  key={i}
+                  className="text-[13.5px] sm:text-[14px] text-[#5C557A]"
+                >
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Services = () => {
+  return (
+    <section className="relative max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
+      {/* Background vertical dashed timeline */}
+      <div className="absolute left-6 sm:left-8 top-0 bottom-0 border-l border-dashed border-[#C9D0EE] pointer-events-none" />
+
+      {/* Heading */}
+      <h2 className="text-[28px] sm:text-[34px] md:text-[38px] font-semibold tracking-[-0.02em] text-[#4B3F8C]">
+        Our <span className="text-[#6F6BD9]">Services</span>
+      </h2>
+
+      <div className="mt-6 sm:mt-8 space-y-6 sm:space-y-7">
+        <SectionCard
+          title="BIM Services"
+          items={[
+            'BIM Modeling (LOD 100–500)',
+            'Revit Family & Template Creation',
+            'Clash Detection, Coordination',
+            'Scan-to-BIM & As-Built',
+            'Automation & MEPF modeling',
+          ]}
+          icon={<FaPencilRuler />}
+          gradient="bg-gradient-to-r from-[#E5ECFF] to-[#CFE1FF]"
+          index={0}
+        />
+
+        <SectionCard
+          title="Business Development"
+          items={[
+            'Go-to-Market for BIM startups',
+            'Proposal & Estimation',
+            'CRM Setup & Lead Gen',
+            'Brand Strategy',
+            'Strategic AEC Partnerships',
+          ]}
+          icon={<FaThLarge />}
+          gradient="bg-gradient-to-r from-[#E9DEFF] to-[#D2C7FF]"
+          index={1}
+        />
+
+        <SectionCard
+          title="Digital Marketing & Branding"
+          items={[
+            'SEO for BIM & AEC',
+            'Social Media & Email Campaigns',
+            'BIM-based Content',
+            'Marketing Decks',
+            'Digital Positioning',
+          ]}
+          icon={<FaBullhorn />}
+          gradient="bg-gradient-to-r from-[#FFE9C9] to-[#FFD68E]"
+          index={2}
+        />
       </div>
     </section>
   );
