@@ -42,11 +42,11 @@ const InfinityLoops = () => {
         >
           <defs>
             <linearGradient id="infinityGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#4B336D"/>
-              <stop offset="25%" stopColor="#6772e5"/>
-              <stop offset="50%" stopColor="#E1627F"/>
-              <stop offset="75%" stopColor="#4B336D"/>
-              <stop offset="100%" stopColor="#6772e5"/>
+              <stop offset="0%" stopColor="#83A1FF"/>
+              <stop offset="25%" stopColor="#674CD5"/>
+              <stop offset="50%" stopColor="#d1710a"/>
+              <stop offset="75%" stopColor="#83A1FF"/>
+              <stop offset="100%" stopColor="#674CD5"/>
             </linearGradient>
           </defs>
           <path d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"/>
@@ -68,11 +68,11 @@ const InfinityLoops = () => {
         >
           <defs>
             <linearGradient id="infinityGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#4B336D"/>
-              <stop offset="25%" stopColor="#6772e5"/>
-              <stop offset="50%" stopColor="#E1627F"/>
-              <stop offset="75%" stopColor="#4B336D"/>
-              <stop offset="100%" stopColor="#6772e5"/>
+              <stop offset="0%" stopColor="#83A1FF"/>
+              <stop offset="25%" stopColor="#674CD5"/>
+              <stop offset="50%" stopColor="#d1710a"/>
+              <stop offset="75%" stopColor="#83A1FF"/>
+              <stop offset="100%" stopColor="#674CD5"/>
             </linearGradient>
           </defs>
           <path d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"/>

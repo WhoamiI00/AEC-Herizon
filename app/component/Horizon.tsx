@@ -1,14 +1,26 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Horizon = () => {
   return (
     <section className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
       {/* Title */}
-      <h2 className="text-3xl sm:text-4xl font-semibold text-[#3D3B7A] text-center">
-        Why Choose <span className="bg-gradient-to-r from-[#7B3DEA] via-[#8F51E7] to-[#D47748] bg-clip-text text-transparent">AEC Horizon?</span>
-      </h2>
+      <motion.h2 
+        className="text-3xl sm:text-4xl font-semibold text-[#3D3B7A] text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        Why Choose <motion.span 
+          className="bg-gradient-to-r from-[#7B3DEA] via-[#8F51E7] to-[#D47748] bg-clip-text text-transparent"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          AEC Horizon?
+        </motion.span>
+      </motion.h2>
 
       {/* Grid wrapper */}
       <div className="relative mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">

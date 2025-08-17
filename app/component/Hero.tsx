@@ -2,19 +2,36 @@
 import React from 'react';
 import { Globe } from '@/components/magicui/globe';
 import InfinityLoops from './InfinityLoop';
+import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center py-20 px-4 relative overflow-x-clip h-[1000px]">
-      <h1 className="text-[60px] leading-none mb-6 font-instrument-sans tracking-normal relative z-10 bottom-[360]">
-        <span className="text-[#4B336D] font-normal inline-block transition-all duration-300 hover:scale-105 hover:text-[#6772e5] cursor-pointer">Three Infinite Loops,</span>
+      <motion.h1 
+        className="text-[60px] leading-none mb-6 font-instrument-sans tracking-normal relative z-10 bottom-[360]"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <motion.span 
+          className="text-[#4B336D] font-normal inline-block cursor-pointer"
+          whileHover={{ scale: 1.05, color: "#6772e5" }}
+          transition={{ type: "spring", stiffness: 400 }}
+        >
+          Three Infinite Loops,
+        </motion.span>
         <br />
-        <span className="bg-gradient-to-r from-[#4B336D] to-[#E1627F] text-transparent bg-clip-text font-semibold inline-block transition-all duration-300 hover:scale-105 hover:from-[#6772e5] hover:to-[#E1627F] cursor-pointer">One Global Impact.</span>
-      </h1>
+        <motion.span 
+          className="bg-gradient-to-r from-[#4B336D] to-[#E1627F] text-transparent bg-clip-text font-semibold inline-block cursor-pointer"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 400 }}
+        >
+          One Global Impact.
+        </motion.span>
+      </motion.h1>
       {/* <InfinityLoops /> */}
       <div className='z-100 scale'>
-        <div className='absolute top-[-250] left-144 scale-[2.5] z-0'><InfinityLoops /></div>
-        <div className='absolute top-[-250] right-144 scale-[2.5] z-0'><InfinityLoops /></div>
-
+        <div className='absolute top-[-250] left-145 scale-[2.5] z-0'><InfinityLoops /></div>
+        <div className='absolute top-[-250] right-145 scale-[2.5] z-0'><InfinityLoops /></div>
       </div>
       <div className="absolute inset-0 z-0 scale-400 h-50 w-full overflow-clip my-70" 
            style={{
@@ -56,7 +73,27 @@ const Hero = () => {
           }}
         />
       </div>
-      
+      {/* Left Infinity Loop with Text */}
+      <div className='relative z-20'>
+        <div className='absolute top-[-100px] left-[320px] z-20 w-[100px] text-center'>
+          <h3 className='text-[#4B336D] font-bold text-2xl mb-1'>Innovation</h3>
+          <p className='text-[#6B7280] text-xs leading-tight'>Cutting-edge solutions</p>
+        </div>
+      </div>
+
+      {/* Right Infinity Loop with Text */}
+      <div className='relative z-20'>
+        <div className='absolute top-[-100px] right-[340px] z-20 w-[100px] text-center'>
+          <h3 className='text-[#4B336D] font-bold text-2xl mb-1'>Sustainability</h3>
+          <p className='text-[#6B7280] text-xs leading-tight'>Eco-friendly practices</p>
+        </div>
+      </div>
+
+      {/* Center Text Block (positioned above the globe) */}
+      <div className='absolute top-[450px] left-1/2 transform -translate-x-1/2 z-20 w-[120px] text-center'>
+        <h3 className='text-[#4B336D] font-bold text-2xl mb-1'>Global Reach</h3>
+        <p className='text-[#6B7280] text-xs leading-tight'>Worldwide connectivity</p>
+      </div>
       
     </section>
   );

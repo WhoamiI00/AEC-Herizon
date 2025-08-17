@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FaPencilRuler, FaThLarge, FaBullhorn } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const SectionCard = ({
   title,
@@ -20,13 +21,14 @@ const SectionCard = ({
     <div className="relative flex gap-4 sm:gap-6">
       {/* Timeline dot */}
       <div className="relative shrink-0">
-        <div className="h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-white shadow-[0_6px_18px_rgba(0,0,0,0.12)] grid place-items-center ring-1 ring-white/60">
+        {/*
+        <div className="scale-200 h-8 w-8 sm:h-12 sm:w-12 rounded-full bg-white shadow-[0_6px_18px_rgba(0,0,0,0.12)] grid place-items-center ring-1 ring-white/60">
           <div className="h-5 w-5 sm:h-7 sm:w-7 rounded-full bg-[#E9ECFF] grid place-items-center text-[#6F6BD9]">
-            {/* icon miniature inside the dot for subtle detail */}
+            
             <span className="text-[12px] sm:text-sm opacity-80">{icon}</span>
           </div>
         </div>
-
+        */}
         {/* timeline dashed line segment below, hidden after last card */}
         <div
           className={`absolute left-1/2 top-12 sm:top-16 -translate-x-1/2 w-px ${
@@ -76,9 +78,20 @@ const Services = () => {
       <div className="absolute left-6 sm:left-8 top-0 bottom-0 border-l border-dashed border-[#C9D0EE] pointer-events-none" />
 
       {/* Heading */}
-      <h2 className="text-[28px] sm:text-[34px] md:text-[38px] font-semibold tracking-[-0.02em] text-[#4B3F8C]">
-        Our <span className="text-[#6F6BD9]">Services</span>
-      </h2>
+      <motion.h2 
+        className="text-[28px] sm:text-[34px] md:text-[38px] font-semibold tracking-[-0.02em] text-[#4B3F8C]"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        Our <motion.span 
+          className="text-[#6F6BD9]"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          Services
+        </motion.span>
+      </motion.h2>
 
       <div className="mt-6 sm:mt-8 space-y-6 sm:space-y-7">
         <SectionCard

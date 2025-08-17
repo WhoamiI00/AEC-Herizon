@@ -3,6 +3,7 @@
 
 import React from "react";
 import { HiLightBulb } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const processSteps = [
   {
@@ -90,15 +91,29 @@ export default function Process() {
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+          <motion.h2 
+            className="text-4xl sm:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             Our{" "}
-            <span className="bg-gradient-to-r from-[#7C3AED] via-[#9B5DE5] to-[#F59E0B] bg-clip-text text-transparent">
+            <motion.span 
+              className="bg-gradient-to-r from-[#7C3AED] via-[#9B5DE5] to-[#F59E0B] bg-clip-text text-transparent"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               Process
-            </span>
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            </motion.span>
+          </motion.h2>
+          <motion.p 
+            className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
             We don't just deliver projects — we engineer clarity, collaboration, and measurable results at every phase.
-          </p>
+          </motion.p>
         </div>
 
         {/* Process Steps - positioned to the right */}

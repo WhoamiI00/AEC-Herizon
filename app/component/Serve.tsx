@@ -44,9 +44,20 @@ const Serve = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-800 sm:text-4xl">
-            Who We <span className="bg-gradient-to-r from-[#6E76FF] to-[#B158FF] bg-clip-text text-transparent">Serve</span>
-          </h2>
+          <motion.h2 
+            className="text-3xl font-semibold tracking-tight text-slate-800 sm:text-4xl"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            Who We <motion.span 
+              className="bg-gradient-to-r from-[#6E76FF] to-[#B158FF] bg-clip-text text-transparent"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Serve
+            </motion.span>
+          </motion.h2>
           <p className="mt-3 text-slate-600">
             From startups to skyscrapers—our clients shape the built world.
           </p>
