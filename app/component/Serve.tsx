@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import { FiUser, FiSettings } from 'react-icons/fi';
 import { BsCone } from 'react-icons/bs';
 import { TbTopologyStar3 } from 'react-icons/tb';
@@ -11,7 +11,7 @@ const fadeUp = {
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.15 * i, duration: 0.6, ease: 'easeOut' },
+    transition: { delay: 0.15 * i, duration: 0.6, ease: easeOut },
   }),
 };
 
@@ -22,7 +22,7 @@ const diagIn = (dx: number, dy: number) => ({
     x: 0,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: easeOut },
   },
 });
 

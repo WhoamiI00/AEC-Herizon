@@ -14,7 +14,7 @@ const Deals = () => {
           </span>
         </h2>
         <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16">
-          We've always got you covered
+          We&apos;ve always got you covered
         </p>
         
         {/* Triangle diagram */}

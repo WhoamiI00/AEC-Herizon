@@ -11,7 +11,7 @@ const Process = () => {
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#47099F] to-[#F8AD1D]" style={{ backgroundImage: 'linear-gradient(90.13deg, #47099F 0.11%, #F8AD1D 125.29%)' }}>Process</span>
         </h2>
         <p className="text-center text-gray-700 max-w-3xl mx-auto mb-16">
-          We don't just deliver projects — we engineer clarity, collaboration, and measurable results at every phase.
+          We don&apos;t just deliver projects — we engineer clarity, collaboration, and measurable results at every phase.
         </p>
         
         <div className="relative max-w-5xl mx-auto">
@@ -96,7 +96,7 @@ const Process = () => {
               </div>
               <div className="bg-white rounded-xl p-8 shadow-sm flex-1">
                 <h3 className="text-2xl font-semibold mb-2">
-                  <span className="text-[#47099F]">We're partners, not </span>
+                  <span className="text-[#47099F]">We&apos;re partners, not </span>
                   <span className="text-[#47099F]">vendors.</span>
                 </h3>
                 <p className="text-gray-700">
