@@ -11,9 +11,9 @@ const Hero = () => {
         <span className="bg-gradient-to-r from-[#4B336D] to-[#E1627F] text-transparent bg-clip-text font-semibold inline-block transition-all duration-300 hover:scale-105 hover:from-[#6772e5] hover:to-[#E1627F] cursor-pointer">One Global Impact.</span>
       </h1>
       {/* <InfinityLoops /> */}
-      <div className='z-100'>
-        <div className='absolute top-[-100] left-153 scale-[2.0]'><InfinityLoops /></div>
-        <div className='absolute top-[-100] right-153  scale-[2.0]'><InfinityLoops /></div>
+      <div className='z-100 scale'>
+        <div className='absolute top-[-250] left-144 scale-[2.5] z-0'><InfinityLoops /></div>
+        <div className='absolute top-[-250] right-144 scale-[2.5] z-0'><InfinityLoops /></div>
 
       </div>
       <div className="absolute inset-0 z-0 scale-400 h-50 w-full overflow-clip my-70" 
