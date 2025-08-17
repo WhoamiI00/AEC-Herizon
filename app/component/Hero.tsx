@@ -1,6 +1,6 @@
 import React from 'react';
 import { Globe } from '@/components/magicui/globe';
-
+import InfinityLoops from './InfinityLoops';
 const Hero = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center py-20 px-4 relative overflow-x-clip h-[1000px]">
@@ -9,7 +9,12 @@ const Hero = () => {
         <br />
         <span className="bg-gradient-to-r from-[#4B336D] to-[#E1627F] text-transparent bg-clip-text font-semibold inline-block transition-all duration-300 hover:scale-105 hover:from-[#6772e5] hover:to-[#E1627F] cursor-pointer">One Global Impact.</span>
       </h1>
-      <div className="absolute inset-0 opacity-20 z-0 scale-400 h-50 w-full overflow-clip my-70">
+      <div className="absolute inset-0 z-0 scale-400 h-50 w-full overflow-clip my-70" 
+           style={{
+             maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 100%)',
+             WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 100%)',
+             opacity: 0.3
+           }}>
         
         <Globe 
           className="mx-auto" 
@@ -21,11 +26,13 @@ const Hero = () => {
             theta: 0.3,
             dark: 0.1,
             diffuse: 0.4,
-            mapSamples: 16000,
+            mapSamples: 200000,
             mapBrightness: 1.2,
-            baseColor: [0.7, 0.8, 0.9], // Light blue color
-            markerColor: [0.4, 0.5, 0.8], // Light blue marker
-            glowColor: [0.7, 0.8, 0.9], // Light blue glow
+            
+            baseColor: [0.5,1,1],
+            markerColor: [0.80, 0.85, 0.96],
+            glowColor: [0.5,1,1],
+            
             markers: [
               { location: [14.5995, 120.9842], size: 0.03 },
               { location: [19.076, 72.8777], size: 0.1 },
