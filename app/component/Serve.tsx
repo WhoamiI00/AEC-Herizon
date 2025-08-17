@@ -178,8 +178,7 @@ function Corner({
   label: string;
   variants: any;
 }) {
-  const base = 'absolute flex items-center gap-3';
-  const map = {
+  const positionClasses = {
     tl: 'left-0 -top-1 -translate-x-3 md:left-6',
     tr: 'right-0 -top-1 translate-x-3 md:right-6',
     bl: 'left-0 bottom-6 -translate-x-3 md:left-6',
@@ -188,12 +187,11 @@ function Corner({
 
   return (
     <motion.div
-      variants={fadeUp}
-      custom={position === 'tl' ? 2 : position === 'tr' ? 3 : position === 'bl' ? 4 : 5}
+      variants={variants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className={`absolute ${position === 'tl' ? '-top-2 left-10' : position === 'tr' ? '-top-2 right-10' : position === 'bl' ? 'bottom-6 left-10' : 'bottom-6 right-10'} flex flex-col items-center`}
+      className={`absolute ${positionClasses[position]} flex flex-col items-center`}
     >
       <div className="rounded-full bg-white p-4 shadow-[0_8px_18px_rgba(90,90,170,0.25)] ring-2 ring-white">
         {icon}

@@ -112,7 +112,7 @@ export default function Process() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            We don't just deliver projects — we engineer clarity, collaboration, and measurable results at every phase.
+            We don&apos;t just deliver projects — we engineer clarity, collaboration, and measurable results at every phase.
           </motion.p>
         </div>
 

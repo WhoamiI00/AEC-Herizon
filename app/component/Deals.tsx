@@ -42,7 +42,7 @@ const Deals = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          We've always got you covered
+          We&apos;ve always got you covered
         </motion.p>
       </div>
 
