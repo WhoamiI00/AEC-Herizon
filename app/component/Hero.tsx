@@ -32,7 +32,7 @@ const Hero = () => {
       
       <div className='z-100 scale'>
         
-        <div className='absolute top-[-10rem] left-[51rem] scale-[2.2] z-0'><TripleInfinity/></div>
+        <div className='absolute top-[-10rem] left-[54rem] scale-[2.2] z-0'><TripleInfinity/></div>
         {/* <div className='absolute top-[-250] left-145 scale-[2.5] z-0'><InfinityLoops /></div>
         <div className='absolute top-[-250] right-145 scale-[2.5] z-0'><InfinityLoops /></div> */}
       </div>
