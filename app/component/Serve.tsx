@@ -35,7 +35,7 @@ const Serve = () => {
         <div className="absolute -right-[25%] bottom-0 h-[120%] w-[120%] -rotate-45 rounded-3xl bg-gradient-to-t from-[#E8ECFF] to-[#F6F8FF]" />
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-4 py-16 sm:py-20 lg:py-24">
+      <div className="relative mx-auto max-w-5xl px-4 py-10 sm:py-20 lg:py-24">
         {/* heading */}
         <motion.div
           variants={fadeUp}
@@ -64,21 +64,21 @@ const Serve = () => {
         </motion.div>
 
         {/* X layout */}
-        <div className="relative mx-auto mt-10 grid h-[520px] w-full max-w-3xl place-items-center">
+        <div className="relative mx-auto mt-25 grid h-[520px] w-full max-w-3xl place-items-center">
           {/* diagonal bars */}
           <motion.div
             variants={diagIn(-40, -40)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="pointer-events-none absolute h-[440px] w-[140px] -rotate-45 rounded-3xl bg-[#C9D0F2]/70"
+            className="pointer-events-none absolute h-[640px] w-[170px] -rotate-45 rounded-full bg-[#C9D0F2]/70"
           />
           <motion.div
             variants={diagIn(40, 40)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="pointer-events-none absolute h-[440px] w-[140px] rotate-45 rounded-3xl bg-[#BFC7F4]/70"
+            className="pointer-events-none absolute h-[640px] w-[170px] rotate-45 rounded-full bg-[#BFC7F4]/70"
           />
 
           {/* center diamond */}
@@ -88,12 +88,12 @@ const Serve = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="relative z-10 grid place-items-center rounded-2xl bg-white px-8 py-10 shadow-[0_10px_24px_rgba(80,80,160,0.25)]"
+            className="rotate-45 relative z-10 grid place-items-center rounded-2xl bg-white px-8 py-10 shadow-[0_10px_24px_rgba(80,80,160,0.25)] h-40 w-40"
             style={{ transform: 'rotate(45deg)' }}
           >
-            <div className="text-center">
-              <p className="text-sm font-medium tracking-wide text-[#A26EEA]">Who Do</p>
-              <p className="mt-1 text-xl font-semibold text-slate-800">We Serve?</p>
+            <div className="text-center rotate-[-45deg] scale-130">
+              <p className="text-l font-medium tracking-wide text-[#A26EEA]">Who Do</p>
+              <p className="text-l font-semibold text-slate-800 mt-[-2]">We Serve?</p>
             </div>
           </motion.div>
 
@@ -103,6 +103,7 @@ const Serve = () => {
             icon={<Chip icon={<div className="relative"><FiUser size={26} className="opacity-90" /><FiSettings size={16} className="absolute -right-3 -top-2 opacity-90" /></div>} />}
             label="Architects & Engineers"
             variants={diagIn(-40, -40)}
+            placeLabelOnTop={true} // NEW
           />
           {/* Top-right */}
           <Corner
@@ -110,6 +111,7 @@ const Serve = () => {
             icon={<Chip icon={<BsCone size={28} className="opacity-90" />} />}
             label="Construction Firms"
             variants={diagIn(40, -40)}
+            placeLabelOnTop={true} // NEW
           />
           {/* Bottom-left */}
           <Corner
@@ -134,10 +136,10 @@ const Serve = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="mt-6 flex justify-center"
+          className="mt-30 flex justify-center"
         >
           <button
-            className="rounded-full bg-gradient-to-r from-[#C76F4E] via-[#A748B8] to-[#6E76FF] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(120,90,200,0.35)] hover:opacity-95"
+            className="rounded-2xl bg-gradient-to-r from-[#C76F4E] via-[#A748B8] to-[#6E76FF] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(120,90,200,0.35)] hover:opacity-95"
             type="button"
           >
             Get Solutions For your Industry
@@ -172,17 +174,19 @@ function Corner({
   icon,
   label,
   variants,
+  placeLabelOnTop = false, // NEW
 }: {
   position: 'tl' | 'tr' | 'bl' | 'br';
   icon: React.ReactNode;
   label: string;
   variants: any;
+  placeLabelOnTop?: boolean;
 }) {
   const positionClasses = {
-    tl: 'left-0 -top-1 -translate-x-3 md:left-6',
-    tr: 'right-0 -top-1 translate-x-3 md:right-6',
-    bl: 'left-0 bottom-6 -translate-x-3 md:left-6',
-    br: 'right-0 bottom-6 translate-x-3 md:right-6',
+    tl: 'left-0 -top-1 -translate-x-3 md:left-36 md:-top-[1.5rem]',
+    tr: 'right-0 -top-1 translate-x-3 md:right-38 md:top-[-1.5rem]',
+    bl: 'left-0 bottom-6 -translate-x-3 md:left-29 md:-bottom-[1.5rem]',
+    br: 'right-0 bottom-6 translate-x-3 md:right-30 md:bottom-[-1.5rem]',
   } as const;
 
   return (
@@ -191,14 +195,14 @@ function Corner({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className={`absolute ${positionClasses[position]} flex flex-col items-center`}
+      className={`absolute ${positionClasses[position]} flex ${
+        placeLabelOnTop ? 'flex-col-reverse ' : 'flex-col'
+      } items-center gap-2 scale-150`}
     >
-      <div className="rounded-full bg-white p-4 shadow-[0_8px_18px_rgba(90,90,170,0.25)] ring-2 ring-white">
+      <div className="rounded-full bg-white p-4 shadow-[0_8px_18px_rgba(90,90,170,0.22)] ring-2 ring-white">
         {icon}
       </div>
-      <Pill>
-        {label}
-      </Pill>
+      <Pill>{label}</Pill>
     </motion.div>
   );
 }
