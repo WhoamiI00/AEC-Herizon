@@ -3,36 +3,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
+
+// Animation variants removed
 
 const Deals = () => {
+    const { ref, inView } = useInView();
   return (
     <section className="relative w-full flex flex-col items-center pt-12 pb-20 bg-transparent h-[160vh] overflow-clip scale-[1]">
       {/* Header */}
-      <div className="text-center mb-55">
-        <motion.h2
-          className="text-[2.5rem] sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+      <div ref={ref} className="text-center mb-55">
+      <motion.h2
+        className={[
+          "text-[2.5rem] sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent",
+          "transition-all duration-700 ease-out",
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        ].join(" ")}
+        initial={false}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <motion.span
+          className="bg-gradient-to-r from-[#47099F] to-[#b97c0c] bg-clip-text text-transparent inline-block"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
         >
-          <motion.span
-            className="bg-gradient-to-r from-[#47099F] to-[#b97c0c] bg-clip-text text-transparent"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Process From Drafts To Deals
-          </motion.span>
-          
-        </motion.h2>
-        <motion.p
-          className="mt-2 text-2xl bg-gradient-to-r from-[#2b0263] to-[#500361] bg-clip-text text-transparent"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          We&apos;ve always got you covered
-        </motion.p>
-      </div>
+          Process From Drafts To Deals
+        </motion.span>
+      </motion.h2>
+
+      <motion.p
+        className={[
+          "mt-2 text-2xl bg-gradient-to-r from-[#2b0263] to-[#500361] bg-clip-text text-transparent",
+          "transition-all duration-700 ease-out delay-150",
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+        ].join(" ")}
+        initial={false}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+      >
+        We&apos;ve always got you covered
+      </motion.p>
+    </div>
 
       {/* Deals visualization with background and icons */}
       <div className="relative w-full max-w-4xl h-[61vh] mb-30">

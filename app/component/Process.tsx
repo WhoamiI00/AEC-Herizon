@@ -142,11 +142,19 @@ export default function Process() {
         <div className="ml-auto max-w-4xl space-y-8 mx-20">
           <div className="space-y-6">
             {processSteps.map((step, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="w-[70vw] h-[20vh] bg-white/50 border border-white shadow-md rounded-[28px] flex overflow-hidden"
+                initial={{ opacity: 0, scale: 0.95, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: index * 0.2, // Stagger effect
+                }}
+                viewport={{ once: true, amount: 0.3 }}
               >
-                {/* Left rectangle (fixed width) */}
+                {/* Left rectangle with ID */}
                 <div className="w-[8vw] h-full bg-white rounded-l-[28px] flex items-center justify-center">
                   <span className="text-[40px] font-semibold leading-[35px] bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
                     {step.id}
@@ -158,7 +166,7 @@ export default function Process() {
                   <div className="text-2xl font-bold text-black">{step.title}</div>
                   <div className="text-xl text-gray-700">{step.description}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
