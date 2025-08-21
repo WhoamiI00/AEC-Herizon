@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${instrumentSans.variable} antialiased`}
-      ><Navbar/>
+      >
         {children}
       </body>
     </html>

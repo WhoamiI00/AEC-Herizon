@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Horizon = () => {
   return (
-    <section className="relative mx-auto w-full max-w-6xl px-6 sm:px-6 lg:px-8 mb-16">
+    <section className="relative mx-auto w-full max-w-6xl px-6 sm:px-6 lg:px-8 -translate-y-10">
       {/* Title */}
       <motion.h2 
         className="text-3xl sm:text-4xl font-medium text-[#3D3B7A]"

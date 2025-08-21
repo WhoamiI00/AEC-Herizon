@@ -4,6 +4,7 @@ import { Globe } from '@/components/magicui/globe';
 import InfinityLoops from './InfinityLoop';
 import { motion } from 'framer-motion';
 import TripleInfinity from './TripleInfinity';
+import Loader from './Loader';
 const Hero = () => {
   return (
     <section className="flex flex-col items-center justify-center text-center py-20 px-4 relative overflow-x-clip h-[1000px]">
