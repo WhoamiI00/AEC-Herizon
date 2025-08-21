@@ -6,39 +6,26 @@ import Image from 'next/image';
 
 const Deals = () => {
   return (
-    <section className="w-full flex flex-col items-center pt-12 pb-20 bg-transparent h-[110vh] overflow-clip">
+    <section className="relative w-full flex flex-col items-center pt-12 pb-20 bg-transparent h-[160vh] overflow-clip">
       {/* Header */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-55">
         <motion.h2
-          className="text-[2.5rem] sm:text-4xl font-extrabold tracking-tight"
+          className="text-[2.5rem] sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <motion.span
-            className="text-[#5E3CCB]"
+            className="bg-gradient-to-r from-[#47099F] to-[#b97c0c] bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Process From
+            Process From Drafts To Deals
           </motion.span>
-          <motion.span
-            className="text-[#4A2FB2]"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            Drafts
-          </motion.span>
-          <motion.span
-            className="text-[#C97932]"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            To Deals
-          </motion.span>
+          
         </motion.h2>
         <motion.p
-          className="text-[#6B6F85] mt-2 text-base"
+          className="mt-2 text-2xl bg-gradient-to-r from-[#2b0263] to-[#500361] bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -48,7 +35,7 @@ const Deals = () => {
       </div>
 
       {/* Deals visualization with background and icons */}
-      <div className="relative w-full max-w-4xl h-[500px] mb-10">
+      <div className="relative w-full max-w-4xl h-[61vh] mb-30">
         {/* Background SVG */}
         <motion.div
           className="absolute inset-0 flex justify-center items-center"
@@ -131,8 +118,73 @@ const Deals = () => {
         </motion.div>
       </div>
 
+      <div className="flex flex-col items-center space-y-4 absolute top-50">
+        {/* Top row: Label + Number */}
+        <div className="flex items-center space-x-4">
+          {/* Left pill */}
+          <div className="px-6 py-3 bg-white/40 border border-white shadow-md rounded-full">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+              A: Architecture
+            </span>
+          </div>
+
+          {/* Circle number */}
+          <div className="w-16 h-16 flex items-center justify-center bg-white/40 border border-white shadow-md rounded-full">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">1</span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="max-w-sm text-center text-base font-medium bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+          BIM & Drafting Services → For precise design documentation, 3D modeling, and construction-ready plans.
+        </p>
+      </div>
+      <div className="flex flex-col items-center space-y-4 absolute bottom-75 right-90">
+        {/* Top row: Label + Number */}
+        <div className="flex items-center space-x-4">
+          {/* Left pill */}
+          <div className="px-6 py-3 bg-white/40 border border-white shadow-md rounded-full">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+              C: Construction
+            </span>
+          </div>
+
+          {/* Circle number */}
+          <div className="w-16 h-16 flex items-center justify-center bg-white/40 border border-white shadow-md rounded-full">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">3</span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="max-w-sm text-center text-base font-medium bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+          Needs: Branding & Digital Marketing → To attract clients, showcase completed projects.
+        </p>
+      </div>
+      <div className="flex flex-col items-center space-y-4 absolute bottom-75 left-90">
+        {/* Top row: Label + Number */}
+        <div className="flex items-center space-x-4">
+          {/* Left pill */}
+          <div className="px-6 py-3 bg-white/40 border border-white shadow-md rounded-full">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+              E: Engineering
+            </span>
+          </div>
+
+          {/* Circle number */}
+          <div className="w-16 h-16 flex items-center justify-center bg-white/40 border border-white shadow-md rounded-full">
+            <span className="text-lg font-extrabold bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">2</span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="max-w-sm text-center text-base font-medium bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+          Technical Business Development → To secure projects, create proposals.
+        </p>
+      </div>
+
+
       {/* View Services Button with hover animation */}
-      <button className="translate-y-3 mt-0 px-7 py-3 rounded-lg text-white text-base font-semibold shadow-lg bg-[#4A2FB2] hover:bg-[#5E3CCB] transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <button className="translate-y-30 mt-0 px-7 py-3 rounded-lg text-white text-base font-semibold shadow-lg bg-[#4A2FB2] hover:bg-[#5E3CCB] transition-all duration-300 hover:scale-105 hover:shadow-xl">
         View our services
       </button>
     </section>

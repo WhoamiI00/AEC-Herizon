@@ -139,35 +139,29 @@ export default function Process() {
         </div>
 
         {/* Process Steps - positioned to the right */}
-        <div className="ml-auto max-w-4xl space-y-8">
-          {processSteps.map((step, index) => (
-            <div key={step.id} className="relative">
-              <div className="flex items-start gap-6">
-                {/* Number Circle - positioned on the left of each card */}
-                <div className="relative flex-shrink-0">
-                  <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center relative z-10">
-                    <span className="text-2xl font-bold text-transparent bg-clip-text [background-image:linear-gradient(90.13deg,#47099F_0.11%,#F8AD1D_125.29%)]">
-                      {step.id}
-                    </span>
-
-                  </div>
-
-                  
+        <div className="ml-auto max-w-4xl space-y-8 mx-20">
+          <div className="space-y-6">
+            {processSteps.map((step, index) => (
+              <div
+                key={index}
+                className="w-[70vw] h-[20vh] bg-white/50 border border-white shadow-md rounded-[28px] flex overflow-hidden"
+              >
+                {/* Left rectangle (fixed width) */}
+                <div className="w-[8vw] h-full bg-white rounded-l-[28px] flex items-center justify-center">
+                  <span className="text-[40px] font-semibold leading-[35px] bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+                    {step.id}
+                  </span>
                 </div>
 
-                {/* Content Card */}
-                <div className="flex-1 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/30">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {step.description}
-                  </p>
+                {/* Right content */}
+                <div className="flex flex-col justify-center px-6 flex-1">
+                  <div className="text-2xl font-bold text-black">{step.title}</div>
+                  <div className="text-xl text-gray-700">{step.description}</div>
                 </div>
               </div>
+            ))}
+          </div>
 
-            </div>
-          ))}
         </div>
       </div>
     </section>
