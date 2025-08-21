@@ -146,9 +146,10 @@ export default function Process() {
                 {/* Number Circle - positioned on the left of each card */}
                 <div className="relative flex-shrink-0">
                   <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center relative z-10">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-[#7C3AED] to-[#9B5DE5] bg-clip-text text-transparent">
+                    <span className="text-2xl font-bold text-transparent bg-clip-text [background-image:linear-gradient(90.13deg,#47099F_0.11%,#F8AD1D_125.29%)]">
                       {step.id}
                     </span>
+
                   </div>
 
                   {/* Dotted connector lines to left decorative area */}
