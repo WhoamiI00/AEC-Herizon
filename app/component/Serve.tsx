@@ -63,23 +63,23 @@ const Serve = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="text-center"
+          className="text-left"
         >
           <motion.h2
-            className="text-3xl font-semibold tracking-tight text-slate-800 sm:text-4xl"
+            className="text-3xl font-medium tracking-tight text-[#390a74] sm:text-4xl"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             Who We <motion.span
-              className="bg-gradient-to-r from-[#6E76FF] to-[#B158FF] bg-clip-text text-transparent"
+              className="bg-gradient-to-r font-semibold from-[#3f1685] via-[#743db8] to-[#760272] bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Serve
             </motion.span>
           </motion.h2>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-black text-xl">
             From startups to skyscrapers—our clients shape the built world.
           </p>
         </motion.div>
@@ -134,8 +134,8 @@ const Serve = () => {
               </svg>
             </div>
             <div className="text-center rotate-[-45deg] scale-130">
-              <p className="text-l font-medium tracking-wide text-[#A26EEA]">Who Do</p>
-              <p className="text-l font-semibold text-slate-800 mt-[-2]">We Serve?</p>
+              <p className="text-l font-semibold tracking-wide bg-gradient-to-r from-[#47099F] to-[#b97c0c] bg-clip-text text-transparent">Who Do</p>
+              <p className="text-l font-semibold bg-gradient-to-r from-[#47099F] to-[#b97c0c] bg-clip-text text-transparent mt-[-2]">We Serve?</p>
             </div>
           </motion.div>
 
@@ -328,10 +328,10 @@ const Serve = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="mt-40 flex justify-center"
+          className="mt-50 flex justify-center scale-[1.1]"
         >
           <button
-            className="rounded-2xl bg-gradient-to-r from-[#C76F4E] via-[#A748B8] to-[#6E76FF] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(120,90,200,0.35)] hover:opacity-95"
+            className="rounded-2xl bg-gradient-to-r from-[#C76F4E] via-[#772b85] to-[#47099F] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(120,90,200,0.35)] hover:opacity-95"
             type="button"
           >
             Get Solutions For your Industry
@@ -355,11 +355,15 @@ function Chip({ icon }: { icon: React.ReactNode }) {
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
-    <span className="mt-3 rounded-full bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
+    <span
+      className="mt-3 rounded-[27.5px] bg-white/40 px-2 py-2 text-sm text-slate-700 
+                 border border-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+    >
       {children}
     </span>
   );
 }
+
 
 function Corner({
   position,
@@ -375,10 +379,10 @@ function Corner({
   placeLabelOnTop?: boolean;
 }) {
   const positionClasses = {
-    tl: 'left-0 -top-1 -translate-x-3 md:left-36 md:-top-[1.5rem]',
-    tr: 'right-0 -top-1 translate-x-3 md:right-38 md:top-[-1.5rem]',
-    bl: 'left-0 bottom-6 -translate-x-3 md:left-29 md:-bottom-[1.5rem]',
-    br: 'right-0 bottom-6 translate-x-3 md:right-30 md:bottom-[-1.5rem]',
+    tl: ' -translate-x-3 left-[9.7rem] -top-[1.6rem]',
+    tr: ' translate-x-3 right-[10.3rem] top-[-1.6rem]',
+    bl: ' -translate-x-3 left-[7.7rem] -bottom-[1.6rem]',
+    br: ' translate-x-3 right-[8.3rem] bottom-[-1.6rem]',
   } as const;
 
   return (

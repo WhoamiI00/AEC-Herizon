@@ -48,8 +48,8 @@ const SectionCard = ({
         <h3 className="text-2xl font-semibold text-[#4B3F8C] mb-6 ml-15">{title}</h3>
         <ul className="space-y-1 ml-15">
           {items.map((item, i) => (
-            <li key={i} className="flex items-center text-[#5C557A] text-base">
-              <span className="w-2 h-2 bg-[#6F6BD9] rounded-full mr-4 shrink-0"></span>
+            <li key={i} className="flex items-center text-base font-light bg-gradient-to-r from-[#47099F] to-[#F8AD1D] bg-clip-text text-transparent">
+              <span className="w-1 h-1 bg-[#6F6BD9] rounded-full mr-4 shrink-0 "></span>
               {item}
             </li>
           ))}
@@ -65,14 +65,14 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold tracking-tight text-[#4B3F8C] mb-20"
+          className="text-4xl md:text-5xl font-medium tracking-tight text-[#4B3F8C] mb-20"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           Our{" "}
           <motion.span
-            className="text-[#6F6BD9]"
+            className="bg-gradient-to-r font-semibold from-[#3f1685] via-[#743db8] to-[#760272] bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >

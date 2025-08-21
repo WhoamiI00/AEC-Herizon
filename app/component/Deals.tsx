@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Deals = () => {
   return (
-    <section className="relative w-full flex flex-col items-center pt-12 pb-20 bg-transparent h-[160vh] overflow-clip">
+    <section className="relative w-full flex flex-col items-center pt-12 pb-20 bg-transparent h-[160vh] overflow-clip scale-[1]">
       {/* Header */}
       <div className="text-center mb-55">
         <motion.h2

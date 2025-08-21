@@ -112,16 +112,16 @@ export default function Process() {
 
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-left mb-16">
           <motion.h2
-            className="text-4xl sm:text-5xl font-bold mb-6"
+            className="text-4xl sm:text-5xl font-medium mb-6 text-[#390a74]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             Our{" "}
             <motion.span
-              className="bg-gradient-to-r from-[#7C3AED] via-[#9B5DE5] to-[#F59E0B] bg-clip-text text-transparent"
+              className="bg-gradient-to-r font-bold from-[#3f1685] via-[#743db8] to-[#760272] bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -129,7 +129,7 @@ export default function Process() {
             </motion.span>
           </motion.h2>
           <motion.p
-            className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
+            className="text-black text-lg max-w-auto leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}

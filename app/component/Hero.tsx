@@ -22,7 +22,7 @@ const Hero = () => {
         </motion.span>
         <br />
         <motion.span 
-          className="bg-gradient-to-r from-[#4B336D] to-[#E1627F] text-transparent bg-clip-text font-semibold inline-block cursor-pointer"
+          className="bg-gradient-to-r from-[#47099F] to-[#d39014] bg-clip-text text-transparent font-semibold inline-block cursor-pointer"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400 }}
         >
@@ -30,12 +30,10 @@ const Hero = () => {
         </motion.span>
       </motion.h1>
       
-      <div className='z-100 scale'>
-        
-        <div className='absolute top-[-10rem] left-[54rem] scale-[2.2] z-0'><TripleInfinity/></div>
-        {/* <div className='absolute top-[-250] left-145 scale-[2.5] z-0'><InfinityLoops /></div>
-        <div className='absolute top-[-250] right-145 scale-[2.5] z-0'><InfinityLoops /></div> */}
-      </div>
+      <div className="absolute top-[-10rem] mx-auto ml-50 scale-[2.2] z-100 pointer-events-none">
+  <TripleInfinity />
+</div>
+
       <div className="absolute inset-0 z-0 scale-400 h-50 w-full overflow-clip my-70" 
            style={{
              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 90%, rgba(0,0,0,0) 100%)',
@@ -78,24 +76,23 @@ const Hero = () => {
       </div>
       {/* Left Infinity Loop with Text */}
       <div className='relative z-20'>
-        <div className='absolute top-[-100px] left-[320px] z-20 w-[100px] text-center'>
-          <h3 className='text-[#4B336D] font-bold text-2xl mb-1'>Innovation</h3>
-          <p className='text-[#6B7280] text-xs leading-tight'>Cutting-edge solutions</p>
+        <div className='absolute top-[-6rem] left-[21rem] z-20 w-[10vw] text-center text-[#37116C]'>
+          <h3 className='font-semibold text-2xl mb-1'>Digital Marketing & Branding</h3>
         </div>
       </div>
 
       {/* Right Infinity Loop with Text */}
       <div className='relative z-20'>
-        <div className='absolute top-[-100px] right-[340px] z-20 w-[100px] text-center'>
-          <h3 className='text-[#4B336D] font-bold text-2xl mb-1'>Sustainability</h3>
-          <p className='text-[#6B7280] text-xs leading-tight'>Eco-friendly practices</p>
+        <div className='absolute top-[-6rem] right-[21rem] z-20 w-[10vw] text-center text-[#37116C]'>
+          <h3 className='font-semibold text-2xl mb-1'>BIM & Drafting Services</h3>
         </div>
       </div>
 
       {/* Center Text Block (positioned above the globe) */}
-      <div className='absolute top-[450px] left-1/2 transform -translate-x-1/2 z-20 w-[120px] text-center'>
-        <h3 className='text-[#4B336D] font-bold text-2xl mb-1'>Global Reach</h3>
-        <p className='text-[#6B7280] text-xs leading-tight'>Worldwide connectivity</p>
+      <div className='relative z-20'>
+      <div className='absolute top-[-6rem] left-1/2 transform -translate-x-1/2 z-20 w-[10vw] text-center text-[#37116C]'>
+        <h3 className='font-semibold text-2xl mb-1'>Technical Business Development</h3>
+      </div>
       </div>
       
     </section>

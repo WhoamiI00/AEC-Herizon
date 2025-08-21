@@ -8,13 +8,13 @@ const Horizon = () => {
     <section className="relative mx-auto w-full max-w-6xl px-6 sm:px-6 lg:px-8 mb-16">
       {/* Title */}
       <motion.h2 
-        className="text-3xl sm:text-4xl font-semibold text-[#3D3B7A]"
+        className="text-3xl sm:text-4xl font-medium text-[#3D3B7A]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         Why Choose <motion.span 
-          className="bg-gradient-to-r from-[#7B3DEA] via-[#8F51E7] to-[#D47748] bg-clip-text text-transparent"
+          className=" font-semibold bg-gradient-to-r from-[#47099F] to-[#c38209] bg-clip-text text-transparent"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
@@ -28,7 +28,7 @@ const Horizon = () => {
         <div className="rounded-3xl shadow-[0_10px_30px_rgba(28,33,66,0.08)] bg-[#ECEFFB]/60 backdrop-blur-sm border border-white/70 ">
           <div className="rounded-t-3xl px-7 pt-6 pb-3 border-b border-white/60 ">
             <h3 className="text-xl font-extrabold ">
-              <span className="bg-gradient-to-r from-[#6D53D2] to-[#D08A49] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#47099F] to-[#c38209] bg-clip-text text-transparent">
                 Transparent Process
               </span>
             </h3>
@@ -42,7 +42,7 @@ const Horizon = () => {
         <div className="rounded-3xl shadow-[0_10px_30px_rgba(28,33,66,0.08)] bg-[#ECEFFB]/60 backdrop-blur-sm border border-white/70">
           <div className="rounded-t-3xl px-7 pt-6 pb-3 border-b border-white/60">
             <h3 className="text-xl font-extrabold">
-              <span className="bg-gradient-to-r from-[#6D53D2] to-[#D08A49] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#47099F] to-[#c38209] bg-clip-text text-transparent">
                 Innovation First
               </span>
             </h3>
@@ -56,7 +56,7 @@ const Horizon = () => {
         <div className="rounded-3xl shadow-[0_10px_30px_rgba(28,33,66,0.08)] bg-[#ECEFFB]/60 backdrop-blur-sm border border-white/70">
           <div className="rounded-t-3xl px-7 pt-6 pb-3 border-b border-white/60">
             <h3 className="text-xl font-extrabold">
-              <span className="bg-gradient-to-r from-[#6D53D2] to-[#D08A49] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#47099F] to-[#c38209] bg-clip-text text-transparent">
                 End to End Coverage
               </span>
             </h3>
